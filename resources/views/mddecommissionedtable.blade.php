@@ -9,7 +9,7 @@
             <th>ACTION</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody id="table-data">
         @foreach ($decommissionedReports as $report)
             <tr>
                 <td>{{ $report->vplatenum }}</td>

@@ -8,11 +8,6 @@ use Illuminate\Support\Facades\Http;
 
 class DashboardController extends Controller
 {
-    public function findname(Request $request){
-        $startDate = $request->input('start');
-        $endDate = $request->input('end');
-        
-    }
     public function troubleshooted(Request $request){
         $startDate = $request->input('start');
         $endDate = $request->input('end');
@@ -22,7 +17,8 @@ class DashboardController extends Controller
             ->whereNotNull('tbl_cvehicles.vplatenum')
             ->whereBetween('tbl_trblesht_report.date_performed', [$startDate, $endDate])
             ->count();
-        return view('card', ['data' => $countTroubleshooted]);
+        return view('card', ['data' => $countTroubleshooted])
+        ->with('modal', $countTroubleshooted);
     }
     public function totaltroubleshoot($startDate, $endDate){
         $countTroubleshooted = DB::table('tbl_trblesht_report')
@@ -44,6 +40,7 @@ class DashboardController extends Controller
         $totaltroubleshoot = $this->totaltroubleshoot($startDate, $endDate);
         return view('modal',['fixed'=>$fixed, 'standby'=>$standby, 'breakdown'=>$breakdown, 'decommissioned'=>$decommissioned, 'data'=>$totaltroubleshoot]);
     }
+
     public function modalcardfixed($startDate, $endDate) {
         $countFixed = DB::table('tbl_trblesht_report')
         ->join('tbl_cvehicles', 'tbl_trblesht_report.vid', '=', 'tbl_cvehicles.vid')

@@ -58,6 +58,7 @@
         </div>
     </div>
 
+
     <script>
         $(document).ready(function() {
 
@@ -113,6 +114,13 @@
                     }
                 });
             }
+
+            $("#search").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#table-data tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
 
             function dateRange(startDate, endDate, dateRangeId, route, content) {
                 ajaxRequest(startDate, endDate, dateRangeId, route, content);

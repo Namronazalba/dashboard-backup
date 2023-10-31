@@ -9,7 +9,7 @@
             <th>ACTION</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody id="table-data">
         @foreach ($fixedReports as $report)
             <tr>
                 <td>{{ $report->vplatenum }}</td>
