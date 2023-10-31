@@ -1,0 +1,129 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #6b6363;
+    color: white;
+    padding: 20px;
+}
+.container {
+    padding: 20px;
+}
+.date-container {
+    display: flex;
+    padding: 20px;
+    justify-content: right;
+}
+.card-container {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+.card-container .card {
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid;
+    justify-content: center;
+}
+.card .card-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+}
+.modal-body .card2 {
+    margin: 20px;
+    padding: 20px;
+    width: 24%;
+    height: 180px;
+    text-align: right;
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+}
+.modal-body .card2:hover{
+    background-color: rgb(34, 99, 198);
+}
+.modal-body .card2 .card-top{
+    display: flex;
+}
+.table-div {
+    padding: 20px;
+}
+.total{
+    font-size: 20px;
+}
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #333;
+    color: #fff;
+}
+.custom-table th {
+    background-color: #222;
+    padding: 10px;
+    text-align: left;
+}
+.custom-table th,
+.custom-table td {
+    border: 1px solid #444;
+}
+.custom-table td {
+    padding: 10px;
+}
+.custom-table button{
+    border: 1px #222;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+}
+.search-container {
+    margin-right: 10px;
+}
+
+.search-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 15px;
+    padding-left: 35px;
+    outline: none; 
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon-container {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-icon {
+    font-size: 20px; 
+    color: #777; 
+}
+
+.calendar-picker {
+    background: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+.card{
+    cursor: pointer;
+}
