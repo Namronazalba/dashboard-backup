@@ -1,7 +1,7 @@
 @extends('main')
-@section('title', 'dashboard')
+@section('title', 'Dashboard')
 @section('content')
-
+{{-- @dd(auth()->user()->name) --}}
     <span>Dashboard</span>
 
     <div class="date-container">

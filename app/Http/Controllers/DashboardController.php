@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Http;
 
 class DashboardController extends Controller
 {
+    public function dashboard()
+    {
+        return view('index');
+    }
     public function troubleshooted(Request $request){
         $startDate = $request->input('start');
         $endDate = $request->input('end');
