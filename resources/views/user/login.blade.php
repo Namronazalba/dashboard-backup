@@ -67,15 +67,20 @@ span.psw {
 <body>
 
 <h2>Login Form</h2>
-
+@error('email')
+<p style="color: red">
+  {{$message}}
+</p>    
+@enderror
 <form action="{{ route('login.post') }}" method="POST">
   <div class="container">
     @csrf
     <label for="uname"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+    <input type="text" placeholder="Enter Email" name="email">
+
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+    <input type="password" placeholder="Enter Password" name="password">
         
     <button type="submit">Login</button>
     <label>

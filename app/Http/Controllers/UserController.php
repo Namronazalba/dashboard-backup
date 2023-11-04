@@ -54,6 +54,7 @@ class UserController extends Controller
             $request->session()->regenerate();
             return redirect('/')->with('success','Login successfully.');
           }
+          return back()->withErrors(['email' => 'Login failed.'])->onlyInput('email');
 
     }
      public function logout(Request $request){
