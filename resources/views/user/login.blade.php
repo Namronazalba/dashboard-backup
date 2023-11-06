@@ -76,7 +76,7 @@ span.psw {
   <div class="container">
     @csrf
     <label for="uname"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email">
+    <input type="text" placeholder="Enter Email" name="email" value={{old('email')}}>
 
 
     <label for="psw"><b>Password</b></label>

@@ -94,7 +94,7 @@
             <p>Please fill in this form to create an account.</p>
             <hr>
             <label for="name"><b>Name</b></label>
-            <input type="text" placeholder="Enter Name" name="name" id="name">
+            <input type="text" placeholder="Enter Name" name="name" id="name" value={{old('name')}}>
             @error('name')
                 <p style="color: red">
                 {{$message}}
@@ -102,7 +102,7 @@
             @enderror
 
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" id="email">
+            <input type="text" placeholder="Enter Email" name="email" id="email" value={{old('email')}}>
             @error('email')
                 <p style="color: red">
                 {{$message}}
