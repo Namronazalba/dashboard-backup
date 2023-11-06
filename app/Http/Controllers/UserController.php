@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\View;
 
 class UserController extends Controller
 {
-    public function index()
+    public function user_index()
     {
         return view('user.index');
     }

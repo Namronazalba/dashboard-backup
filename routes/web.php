@@ -41,12 +41,11 @@ Route::controller(DashboardController::class)->group(function(){
 Route::middleware(['guest'])->group(function () {
     Route::get('/login', [UserController::class, 'login'])->name('login');
     Route::get('/register', [UserController::class, 'register'])->name('register');
-    Route::post('/register', [UserController::class, 'registerPost'])->name('register.post');
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/index', [UserController::class, 'index'])->name('index');
+    Route::get('/user_index', [UserController::class, 'user_index'])->name('index');
     Route::post('/logout', [UserController::class, 'logout']);
 });
-
+Route::post('/registerProcess', [UserController::class, 'registerPost'])->name('register.post');
 Route::post('/loginProcess', [UserController::class, 'loginPost'])->name('login.post');
